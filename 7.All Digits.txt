@@ -1,0 +1,39 @@
+-->1. You've to display the digits of a number.
+2. Take as input "n", the number for which digits have to be displayed.
+3. Print the digits of the number line-wise.
+
+--ANS--
+#include<iostream>
+#include<bits/stdc++.h>
+#include<math.h>
+using namespace std;
+int digits(int n)
+{
+    int count =0;
+    while(n)
+    {
+        int y=n%10;
+        count++;
+        n=n/10;
+        
+    }
+    return count;
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int h=digits(n);
+    int y1=h;
+    int sum=0;
+    while(h)
+    {
+        
+        int powerof = pow(10,h-1);
+        int y = n/powerof;
+        n=n-y*powerof;
+        h=h-1;
+        cout<<y;
+        
+    }
+}

@@ -1,0 +1,51 @@
+-->1. You've to print all prime numbers between a range. 
+2. Take as input "low", the lower limit of range.
+3. Take as input "high", the higher limit of range.
+4. For the range print all the primes numbers between low and high (both included).
+
+
+--ANS--
+#include<iostream>
+#include<bits/stdc++.h>
+#include<math.h>
+using namespace std;
+bool isPrime(int n)    //0->prime 1->non prime
+{
+    int count = 0;
+    for(int i=2;i<= sqrt(n);i++)
+    {
+        
+        if(n%i==0)
+        {
+            count++;
+            break;
+        }
+        else
+        {
+            continue;
+        }
+    }
+    return count;
+    
+}
+int main()
+{
+    
+    int n1,n2;
+    cin>>n1;
+    cin>>n2;
+    for(int i=n1;i<=n2;i++)
+    {
+       bool p = isPrime(i);
+       if(!p)
+       {
+           cout<<i<<endl;
+       }
+       else
+       {
+           continue;
+       }
+    }
+    
+    
+}

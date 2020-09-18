@@ -1,0 +1,86 @@
+-->1. You are required to check if a given set of numbers is a valid pythagorean triplet.
+2. Take as input three numbers a, b and c.
+3. Print true if they can form a pythagorean triplet and false otherwise.
+
+--ANS--
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+bool pythogoras(int x,int y,int z)
+{
+    bool d;
+    if(d=x*x==y*y+z*z)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+   
+}
+int main()
+{
+    int a,b,c;
+    cin>>a>>b>>c;
+    int max = a;
+    if(b>=max)
+    {
+        max =b;
+        
+    }
+    else if(c>=max)
+    {
+        max =c;
+       
+        
+    }
+    else
+    {
+        max=a;
+        
+    }
+    
+    if(max==a)
+    {
+        if(a*a==b*b+c*c)
+        {
+            cout<<"true"<<endl;
+        }
+        else
+        {
+            cout<<"false"<<endl;
+        }
+        
+        
+    }
+    else if(max==b)
+    {
+        if(b*b==a*a+c*c)
+        {
+            cout<<"true"<<endl;
+        }
+        else
+        {
+            cout<<"false"<<endl;
+        }
+        
+        
+    }
+   else
+    {
+        if(c*c==b*b+a*a)
+        {
+            cout<<"true"<<endl;
+        }
+        else
+        {
+            cout<<"false"<<endl;
+        }
+        
+        
+    }
+    
+  
+    
+}

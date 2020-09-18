@@ -1,0 +1,87 @@
+
+-->1. You've to check whether a given number is prime or not.
+2. Take a number "t" as input representing count of input numbers to be tested.
+3. Take a number "n" as input "t" number of times.
+4. For each input value of n, print "prime" if the number is prime and "not prime" otherwise.
+
+
+--ANS-- 
+Prime Brute Force(Wont get accepted for large i/ps)
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n1,t;
+    cin>>t;
+    while(t--)
+    {
+        cin>>n1;
+        int count =0;
+        
+        for(int i = 1; i<= n1 ; i++)
+        {
+            if(n1%i==0)
+            {
+                count++;
+            }
+            else
+            {
+            	continue;
+            }
+            
+        }
+      
+        if(count>2)
+        {
+            cout<<"not prime"<<endl;
+        }
+        else
+        {
+            cout<<"prime"<<endl;      
+        
+            
+        }
+    }
+}
+
+
+
+--ANS--
+
+#include<iostream>
+#include<bits/stdc++.h>
+#include<math.h>
+using namespace std;
+int main()
+{
+    int n1,t;
+    
+    cin>>t;
+    while(t--)
+    {
+        cin>>n1;
+        int y = sqrt(n1);
+        int count =0;
+        for(int i = 2;i <= y; i++)
+        {
+            if(n1 % i==0)
+            {
+                count++;
+                cout<<"not prime"<<endl;
+                break;
+            }
+            else
+            {
+                continue;
+            }
+            
+        }
+        if(count==0)
+        {
+            cout<<"prime"<<endl;
+        }
+      
+        
+    }
+}

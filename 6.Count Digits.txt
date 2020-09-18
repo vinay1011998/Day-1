@@ -1,0 +1,23 @@
+-->1. You've to count the number of digits in a number.
+2. Take as input "n", the number for which the digits has to be counted.
+3. Print the digits in that number.
+
+
+--ANS--
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int count =0;
+    
+    while(n)
+    {
+       int y = n%10;
+       count++;
+       n=n/10;
+    }
+    cout<<count<<endl;
+}

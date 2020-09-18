@@ -1,0 +1,19 @@
+-->1. You've to display the digits of a number in reverse.
+2. Take as input "n", the number for which digits have to be display in reverse.
+3. Print the digits of the number line-wise, but in reverse order.
+
+--ANS--
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    while(n)
+    {
+        int y = n%10;
+        cout<<y<<endl;
+        n=n/10;
+    }
+}
